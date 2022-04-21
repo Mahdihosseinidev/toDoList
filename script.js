@@ -3,7 +3,7 @@ let form = document.querySelector("#task-form");
 let taskInput = document.querySelector("#task");
 let taskList = document.querySelector(".collection");
 let filter = document.querySelector("#filter");
-let clearTask = document.querySelector("clear-task");
+let clearTask = document.querySelector(".clear-task");
 
 // Invoke all events
 loadAllEvents();
@@ -16,6 +16,8 @@ function loadAllEvents() {
   taskList.addEventListener("click", removeTask);
   // remove all task
   clearTask.addEventListener("click", clearAllTask);
+  // filter task
+  filter.addEventListener("keyup", filterTasks);
 }
 
 // Function Add Tasks
@@ -49,8 +51,15 @@ function removeTask(e) {
 
 // Clear All Task
 
-function clearAllTask (){
-  while(taskList.firstChild){
+function clearAllTask(e) {
+  e.preventDefault();
+  while (taskList.firstChild) {
     taskList.removeChild(taskList.firstChild);
   }
+}
+
+// Filter Tasks
+function filterTasks() {
+  let text = filter.value.toLowerCase();
+  console.log(text);
 }
