@@ -61,5 +61,14 @@ function clearAllTask(e) {
 // Filter Tasks
 function filterTasks() {
   let text = filter.value.toLowerCase();
-  console.log(text);
+  let listTask = document.querySelectorAll('.collection-item');
+  listTask.forEach((taskName)=>{
+    let listTaskName = taskName.innerText.toLowerCase();
+    if(listTaskName.indexOf(text) != -1){
+      taskName.style.display = 'block';
+    }else{
+      taskName.style.display = 'none';
+    }
+  })
+  console.log(listTask)
 }
