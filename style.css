@@ -1,57 +1,55 @@
 body {
-  background-image: linear-gradient(
-    to left top,
-    #5081cb,
-    #00a7ea,
-    #00c8d1,
-    #00e088,
-    #a8eb12
-  );
-  background-repeat: no-repeat;
+  background: url(./images/background.jpg) no-repeat center center ;
+  background-size: auto;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-width: 375px;
 }
-.row{
-    margin-bottom: 0 !important;
-}
+
+/* * box top */
 .wrapper-card {
-  margin-top: 50px;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 2px 3px 10px 2px rgba(0,0,0,0.2) ;
 }
 .card-addtask {
-  background-color: #d8feac;
-  border-radius: 10px 2px 10px 2px !important;
-  box-shadow: 2px 3px 10px 2px #6f6f6f !important;
-  padding: 30px 15px;
+  padding: 30px;
 }
 .card-title{
     font-weight: 500;
     font-size: 17px;
     color: #686868;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
+.error{
+  color: #ff0000;
+  font-size: 14px;
+  border: 1px solid #ff0000;
+  padding: 2px 5px;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+/* *box bottom */
 .wrapper-listtaskandfilter{
     margin-top: 50px;
 }
-.wrapper-filter{
-
+.box-filter {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 2px;
+  box-shadow: 2px 3px 10px 2px rgba(0,0,0,0.2) ;
+}
+.title-list-task {
+  margin-top: 35px;
 }
 .collection{
-    margin: 0.5rem 0 1rem 0;
-    border-radius: 2px;
-    box-shadow: 0px 1px 5px 0px #464545;
-    background-color: rgb(251 251 251 / 70%);
-    overflow: hidden;
     width: 100%;
-    border-radius: 5px;
     position: relative;
-    min-height: 153px;
 }
-.clear-task{
-    border-radius: 10px;
-}
-.error{
-    color: red;
-    font-size: 12px;
-    border: 1px solid red;
-    padding: 2px 5px;
-    opacity: 0;
-    transition: all 1s ease-in-out;
-}
+.btn-clear{
+  margin-top: 20px;
+} 

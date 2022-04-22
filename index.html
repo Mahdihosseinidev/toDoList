@@ -20,48 +20,36 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!--  -->
+    <!-- box top  -->
     <div class="container wrapper-card">
-      <div class="row">
-        <div class="col s12">
-          
-            <div class="card-content card-addtask">
-              <span class="card-title">TaskList</span>
-              <div class="row">
-                <form id="task-form">
-                  <div class="col s12 input-field">
-                    <input type="text" name="task" id="task" />
-                    <label for="task">New Task</label>
-                    <span class="error">Please fill the Task field</span>
-                  </div>
-                  <input type="submit" value="Add Task" class="btn" />
-                </form>
-              </div>
+      <div class="col s12">
+        <div class="card-content card-addtask">
+          <span class="card-title">Add new task</span>
+          <form id="task-form">
+            <div class="col s12 input-field">
+              <input type="text" name="task" id="task" />
+              <label for="task">New Task</label>
+              <span class="error">Please, fill the Task field</span>
             </div>
-         
+            <input type="submit" value="Add Task" class="btn btn-custom" />
+          </form>
         </div>
       </div>
     </div>
 
-    <!--  -->
+    <!-- box bottom -->
     <div class="container wrapper-listtaskandfilter">
-      <div class="row">
+      <div class="col s12 box-filter">
+        <!-- filter tasks -->
+        <div class="col s12 input-field wrapper-filter">
+          <input type="text" name="filter" id="filter" />
+          <label for="filter" class="black-text">Filter Tasks</label>
+        </div>
+        <!-- list tasks -->
         <div class="col s12">
-          <div class="">
-            <div class="row">
-              <!--  -->
-              <div class="col s12 input-field wrapper-filter">
-                <input type="text" name="filter" id="filter" />
-                <label for="filter" class="black-text">Filter Tasks</label>
-              </div>
-              <!--  -->
-              <div class="col s12">
-                <h5>List Tasks</h5>
-                <ul class="collection"></ul>
-                <a href="#" class="btn clear-task black"> Clear Tasks</a>
-              </div>
-            </div>
-          </div>
+          <h5 class="title-list-task">List Tasks</h5>
+          <ul class="collection"></ul>
+          <a href="#" class="btn clear-task black btn-clear"> Clear Tasks</a>
         </div>
       </div>
     </div>

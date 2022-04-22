@@ -4,7 +4,7 @@ let taskInput = document.querySelector("#task");
 let taskList = document.querySelector(".collection");
 let filter = document.querySelector("#filter");
 let clearTask = document.querySelector(".clear-task");
-let error = document.querySelector('.error');
+let error = document.querySelector(".error");
 
 // Invoke all events
 loadAllEvents();
@@ -27,11 +27,11 @@ function loadAllEvents() {
 
 function addTask(e) {
   e.preventDefault();
-  if (taskInput.value == "" || taskInput.value == " ") {
-    error.style.opacity = '1';
-    setTimeout(()=>{
-      error.style.opacity = '0';
-    },2000)
+  if (taskInput.value.trim() === "" || !taskInput.value) {
+    error.style.opacity = "1";
+    setTimeout(() => {
+      error.style.opacity = "0";
+    }, 3000);
   } else {
     let li = document.createElement("li");
     li.className = "collection-item";
@@ -65,8 +65,6 @@ function removeTask(e) {
         removeTaskFromLs(e.target.parentElement.parentElement);
       }
     });
-
-
   }
 }
 
@@ -74,7 +72,7 @@ function removeTask(e) {
 
 function clearAllTask(e) {
   e.preventDefault();
-  Swal.fire('Any fool can use a computer')
+  Swal.fire("Any fool can use a computer");
   while (taskList.firstChild) {
     taskList.removeChild(taskList.firstChild);
   }
