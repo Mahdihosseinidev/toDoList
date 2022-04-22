@@ -31,7 +31,7 @@ function addTask(e) {
     error.style.opacity = "1";
     setTimeout(() => {
       error.style.opacity = "0";
-    }, 2000);
+    }, 3000);
   } else {
     let li = document.createElement("li");
     li.className = "collection-item";
