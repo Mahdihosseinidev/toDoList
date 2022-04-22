@@ -1,5 +1,5 @@
 body {
-  background: url(./background.jpg) no-repeat center center ;
+  background: url(./images/background.jpg) no-repeat center center ;
   background-size: auto;
   min-height: 100vh;
   display: flex;
