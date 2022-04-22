@@ -27,7 +27,7 @@ function loadAllEvents() {
 
 function addTask(e) {
   e.preventDefault();
-  if (taskInput.value.trim() == "" || !taskInput.value) {
+  if (taskInput.value.trim() === "" || !taskInput.value) {
     error.style.opacity = "1";
     setTimeout(() => {
       error.style.opacity = "0";
