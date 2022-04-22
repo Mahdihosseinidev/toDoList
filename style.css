@@ -6,6 +6,8 @@ body {
   flex-direction: column;
   min-width: 375px;
 }
+
+/* * box top */
 .wrapper-card {
   margin: 50px auto;
   background-color: #fff;
@@ -31,6 +33,7 @@ body {
   transition: all 1s ease-in-out;
 }
 
+/* *box bottom */
 .wrapper-listtaskandfilter{
     margin-top: 50px;
 }
