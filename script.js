@@ -46,10 +46,23 @@ function addTask(e) {
 
 function removeTask(e) {
   if (e.target.parentElement.classList.contains("delete-item")) {
-    if (confirm("are you sure?")) {
-      e.target.parentElement.parentElement.remove();
-      removeTaskFromLs(e.target.parentElement.parentElement);
-    }
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire("Deleted!", "Your task has been deleted.", "success");
+        e.target.parentElement.parentElement.remove();
+        removeTaskFromLs(e.target.parentElement.parentElement);
+      }
+    });
+
+
   }
 }
 
@@ -57,6 +70,7 @@ function removeTask(e) {
 
 function clearAllTask(e) {
   e.preventDefault();
+  Swal.fire('Any fool can use a computer')
   while (taskList.firstChild) {
     taskList.removeChild(taskList.firstChild);
   }
