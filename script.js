@@ -4,6 +4,7 @@ let taskInput = document.querySelector("#task");
 let taskList = document.querySelector(".collection");
 let filter = document.querySelector("#filter");
 let clearTask = document.querySelector(".clear-task");
+let error = document.querySelector('.error');
 
 // Invoke all events
 loadAllEvents();
@@ -26,8 +27,11 @@ function loadAllEvents() {
 
 function addTask(e) {
   e.preventDefault();
-  if (taskInput.value == "") {
-    alert("Please fill the Task field");
+  if (taskInput.value == "" || taskInput.value == " ") {
+    error.style.opacity = '1';
+    setTimeout(()=>{
+      error.style.opacity = '0';
+    },2000)
   } else {
     let li = document.createElement("li");
     li.className = "collection-item";
